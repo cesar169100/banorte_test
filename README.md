@@ -10,7 +10,7 @@ Posteriormente pretendo usar este pronostico como feature de un modelo supervisa
 Una vez con el dataframe listo para ser usado como input del modelo, se hace la separacion train/test y entrenamos con los parametros estandar. Se abordo como un problema de regresion y no de clasificacion; aunque los ratings pudieran parecer categorias, no lo son, es una escala y por tanto una variable ordinal y en este sentido se utilizo la metrica MAE para medir su efectividad en el test set.
 Los pronosticos se redondearon y asi se obtuvo el MAE. Los shapley values sirven para explicar las predicciones de algoritmos complejos pues proporciona una medida de que tanto contribuye cada feature al pronostico. El notebook de esta parte es model.ipynb. A continuacion vemos la importancia global de las características:
 
-![Importancia](figures/imagen.png)
+![Importancia](figures/shap.png)
 
 # Ideas adicionales
 Algunas cosas que quedaron pendientes son:
