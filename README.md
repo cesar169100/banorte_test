@@ -14,6 +14,7 @@ Los pronosticos se redondearon y asi se obtuvo el MAE. Los shapley values sirven
 
 # Ideas adicionales
 Algunas cosas que quedaron pendientes son:
+- Agregar al modelo supervisado features referentes a metricas de agregacion por usuario, como rating promedio por usuario o por usuario/genero.
 - Tuneo de los hiperparametros para el modelo SVD y xgboost a traves de un optimizador bayesiano. En el codigo main.py viene una referencia de como hacerlo.
 - Los shap values son muy costosos de calcular pues se necesita determinar todas las posibles combinaciones de las features, entonces queda pendiente usar una metodologia mas optima.
 - Probar el modelo con las features mas importantes y ver si esta simplificacion se traduce en mejoria.
