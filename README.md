@@ -8,7 +8,9 @@ La idea intuitiva del abordaje SVD es explicar a los usuarios y peliculas en ter
 Posteriormente pretendo usar este pronostico como feature de un modelo supervisado para incluir otros datos como edad, ocupacion, etc. Para finalizar esta parte se realizo el encoding de las variables categoricas y, como se menciono, el pronostico del modelo SVD se agrego como feature al dataframe. El notebook usado hasta ahora es exploration.ipynb.
 # Modelo Xgboost y Shapley values
 Una vez con el dataframe listo para ser usado como input del modelo, se hace la separacion train/test y entrenamos con los parametros estandar. Se abordo como un problema de regresion y no de clasificacion; aunque los ratings pudieran parecer categorias, no lo son, es una escala y por tanto una variable ordinal y en este sentido se utilizo la metrica MAE para medir su efectividad en el test set.
-Los pronosticos se redondearon y asi se obtuvo el MAE. Los shapley values sirven para explicar las predicciones de algoritmos complejos pues proporciona una medida de que tanto contribuye cada feature al pronostico. El notebook de esta parte es model.ipynb. 
+Los pronosticos se redondearon y asi se obtuvo el MAE. Los shapley values sirven para explicar las predicciones de algoritmos complejos pues proporciona una medida de que tanto contribuye cada feature al pronostico. El notebook de esta parte es model.ipynb. A continuacion vemos la importancia global de las características:
+
+![Importancia](./figures/shap.png)
 
 # Ideas adicionales
 Algunas cosas que quedaron pendientes son:
@@ -19,4 +21,3 @@ Algunas cosas que quedaron pendientes son:
 # Comentarios adicionales
 - El test incluye requirements.txt para poderlo replicar en un entorno virtual.
 - Seria necesario cambiar la ruta de os.chdir() para que lea las rutas relativas, en caso de ejecutar el codigo.
-- La figura de la importancia de las caracteristicas no se visualiza en el Readme
